@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -A1p | LC_COLLATE=C sort -d | awk '{printf "%s%s", $0, (NR==NF) ? "\n" : ","}'
